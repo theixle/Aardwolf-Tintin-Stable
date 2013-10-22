@@ -303,7 +303,33 @@
 	#unvar password;
 	#history read {$dir/history-discon.txt}
 }
- 
-protocol gmcp sendchar
+
+#ACTION {^############# Reconnecting to Game #############$}
+{
+        #delay 2
+        {
+            slist spellup;
+            spup resume;
+            #NOP bug: For some reason have to do this twice?;
+            slist spellup;
+        };
+        protocol gmcp sendchar;
+        #NOP Put the Tintin map in the right room;
+        #send {look}
+}
+
+#ACTION {^Welcome to Aardwolf. May your adventures be mystical, challenging and rewarding.}
+{
+        #delay 2
+        {
+            slist spellup;
+            spup resume;
+            #NOP bug: For some reason have to do this twice?;
+            slist spellup;
+        };
+        protocol gmcp sendchar;
+        #NOP Put the Tintin map in the right room;
+        #send {look}
+}
 
 #CLASS {gmcp} CLOSE
