@@ -71,7 +71,7 @@ Displaying:
 Linux/Unix:
 	Setup panes in Tmux or multiple terminal windows and use the tail command (ex. tail -fs .1 minimap) 
 	on whichever log file you wish. 
-
+    Tmux: http://tmux.sourceforge.net/
 Mac OSX:
 	See link below for instructions setting up Tmux.
 	https://blogs.oracle.com/unixben/entry/install_tmux_on_mac_os
