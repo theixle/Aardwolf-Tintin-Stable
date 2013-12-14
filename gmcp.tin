@@ -64,6 +64,11 @@
 	};
 	#line log {$dir/group} {$name_line\n\n$leader_line\n\n\n$gmcp_groupie_list};
 	#var gmcp_groupie_list {};
+	#if {$debug}
+	{
+		#showme %1
+	};
+
 }
 
 #EVENT {IAC SB GMCP char.status IAC SE}
